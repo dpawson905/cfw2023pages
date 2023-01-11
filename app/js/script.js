@@ -13,15 +13,24 @@ ready(function () {
     navButton.classList.toggle("active");
   });
 
+  /* OFFCANVAS NAV */
+  const offCanvas = document.querySelector(".off-canvas-nav");
+  navButton.addEventListener("click", () => {
+    offCanvas.classList.toggle("open");
+  });
+
   /* Change nav color on scroll */
-  const nav = document.querySelector('.header__nav');
+  const nav = document.querySelector(".header__nav");
   window.onscroll = () => {
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
-      nav.classList.add('scrolled')
+    if (
+      document.body.scrollTop >= 200 ||
+      document.documentElement.scrollTop >= 200
+    ) {
+      nav.classList.add("scrolled");
     } else {
-      nav.classList.remove('scrolled')
+      nav.classList.remove("scrolled");
     }
-  }
+  };
 
   /* TYPEWRITER JS */
   new Typewriter("#typewriter", {
@@ -44,32 +53,32 @@ ready(function () {
 
     // Example store locations
     var storeLocations = [
-      { 
-        name: "Winston Salem", 
-        phone: '(336)-760-1766',
-        phoneLink: 'tel:+1-336-760-1766',
-        address: '1500 Hanes Mall Blvd, Winston-Salem, NC 27103',
-        href: 'https://www.google.com/search?q=casual+furniture+world+winston+salem',
-        lat: 36.07007, 
-        lng: -80.33271 
+      {
+        name: "Winston Salem",
+        phone: "(336)-760-1766",
+        phoneLink: "tel:+1-336-760-1766",
+        address: "1500 Hanes Mall Blvd, Winston-Salem, NC 27103",
+        href: "https://www.google.com/search?q=casual+furniture+world+winston+salem",
+        lat: 36.07007,
+        lng: -80.33271,
       },
-      { 
-        name: "Greensboro", 
-        phone: '(336)-252-2640',
-        phoneLink: 'tel:+1-336-252-2640',
-        address: '3809 Lawndale Dr, Greensboro, NC 27455',
-        href: 'https://www.google.com/search?q=casual+furniture+world+greensboro',
-        lat: 36.12056, 
-        lng: -79.83115 
+      {
+        name: "Greensboro",
+        phone: "(336)-252-2640",
+        phoneLink: "tel:+1-336-252-2640",
+        address: "3809 Lawndale Dr, Greensboro, NC 27455",
+        href: "https://www.google.com/search?q=casual+furniture+world+greensboro",
+        lat: 36.12056,
+        lng: -79.83115,
       },
-      { 
-        name: "Myrtle Beach", 
-        phone: '(843)-272-1376',
-        phoneLink: 'tel:+1-843-272-1376',
-        address: '2500 Hwy 17 S, North Myrtle Beach, SC 29582',
-        href: 'https://www.google.com/search?q=casual+furniture+world+myrtle+beach',
-        lat: 33.80839, 
-        lng: -78.71382 
+      {
+        name: "Myrtle Beach",
+        phone: "(843)-272-1376",
+        phoneLink: "tel:+1-843-272-1376",
+        address: "2500 Hwy 17 S, North Myrtle Beach, SC 29582",
+        href: "https://www.google.com/search?q=casual+furniture+world+myrtle+beach",
+        lat: 33.80839,
+        lng: -78.71382,
       },
     ];
 
@@ -92,14 +101,13 @@ ready(function () {
     }
 
     var locationDiv = document.getElementById("location");
-    var distanceLink = document.querySelector('.distance');
-    var addressLink = document.querySelector('.address');
-    var phoneLink = document.querySelector('.phone');
-    
-    locationDiv.innerHTML =
-      "Nearest store: " +
-      nearestStore.name;
-    distanceLink.innerHTML = "Distance: " + nearestDistance.toFixed(2) + " miles away";
+    var distanceLink = document.querySelector(".distance");
+    var addressLink = document.querySelector(".address");
+    var phoneLink = document.querySelector(".phone");
+
+    locationDiv.innerHTML = "Nearest store: " + nearestStore.name;
+    distanceLink.innerHTML =
+      "Distance: " + nearestDistance.toFixed(2) + " miles away";
     distanceLink.href = nearestStore.href;
     addressLink.innerHTML = "Address: " + nearestStore.address;
     addressLink.href = nearestStore.href;

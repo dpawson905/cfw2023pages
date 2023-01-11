@@ -132,7 +132,8 @@
           transition: all 0.3s ease-in-out;
         }
 
-        &:hover {
+        &:hover,
+        &:active {
           color: var(--color-white);
           &::before {
             width: 100%;

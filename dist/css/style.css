@@ -235,10 +235,10 @@ ul {
   background-color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
-.header__nav--link a:hover {
+.header__nav--link a:hover, .header__nav--link a:active {
   color: var(--color-white);
 }
-.header__nav--link a:hover::before {
+.header__nav--link a:hover::before, .header__nav--link a:active::before {
   width: 100%;
   left: 0;
 }
@@ -383,6 +383,63 @@ ul {
   color: var(--color-white) !important;
 }
 
+.off-canvas-nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #eee;
+  transition: left 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+.off-canvas-nav--brand {
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+  width: 100%;
+}
+.off-canvas-nav--links {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+.off-canvas-nav--links__link {
+  font-size: calc(1.2rem + 0.5vw);
+  border: 1px solid var(--color-gold);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.off-canvas-nav--links__link:hover, .off-canvas-nav--links__link:active {
+  background-color: var(--color-gold);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.off-canvas-nav.open {
+  left: 0;
+  background-color: #333;
+  opacity: 1;
+  transition: left 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 9999;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
 main {
   grid-column: container-start/container-end;
 }
@@ -396,17 +453,19 @@ main {
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  height: 50dvh;
+  min-height: 50dvh;
   font-size: calc(1.5rem + 2vw);
+  overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
   .boxes {
     grid-template-columns: 1fr;
+    min-height: 1000px;
   }
 }
 .boxes__box {
-  height: 100%;
   width: 100%;
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -414,17 +473,59 @@ main {
   -ms-flex-align: center;
       align-items: center;
   color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+.boxes__box a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .boxes__box a {
+    opacity: 1;
+  }
+}
+.boxes__box:hover a {
+  opacity: 1;
+}
+.boxes__box:nth-child(1), .boxes__box:nth-child(2), .boxes__box:nth-child(3) {
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.boxes__box:nth-child(1):hover, .boxes__box:nth-child(1):active, .boxes__box:nth-child(2):hover, .boxes__box:nth-child(2):active, .boxes__box:nth-child(3):hover, .boxes__box:nth-child(3):active {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .boxes__box:nth-child(1):hover, .boxes__box:nth-child(1):active, .boxes__box:nth-child(2):hover, .boxes__box:nth-child(2):active, .boxes__box:nth-child(3):hover, .boxes__box:nth-child(3):active {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 .boxes__box:nth-child(1) {
-  height: 100%;
   background-color: var(--color-blue-mod-dark);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/outdoor-furn.webp");
 }
 .boxes__box:nth-child(2) {
-  height: 100%;
   background-color: var(--color-grey);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/outdoor-kit.webp");
 }
 .boxes__box:nth-child(3) {
-  height: 100%;
   background-color: var(--color-blue-mod);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/fireplace.webp");
 }
 /*# sourceMappingURL=style.css.map */
