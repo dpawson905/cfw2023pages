@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="dist/assets/images/favicon.ico" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <title>Darell Pawson &mdash; Web Developer</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <button id="nav-button" class="header__nav-button">
+        <div class="header__nav-button--line"></div>
+        <div class="header__nav-button--line"></div>
+        <div class="header__nav-button--line"></div>
+      </button>
+      <nav class="header__nav">
+        <div class="header__nav--left">
+          <a href="#" class="header__nav--brand">
+            <img
+              src="dist/assets/images/logo-light-min.webp"
+              alt="Casual Furniture World Logo"
+            />
+          </a>
+          <div class="dropdown">
+            <a id="location" href="#"></a>
+            <div class="dropdown__content">
+              <a href="" class="distance">...Loading</a>
+              <a href="" class="address">...Loading</a>
+              <a href="" class="phone">...Loading</a>
+            </div>
+          </div>
+        </div>
+        
+        <ul class="header__nav--links">
+          <li class="header__nav--link">
+            <a class="active" href="/">Home</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">About</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">Blog</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">Collections</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">Locations</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">Our Team</a>
+          </li>
+          <li class="header__nav--link">
+            <a href="#">Shop Online</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__video-hero">
+        <div class="header__video-hero--overlay"></div>
+        <video
+          autoplay
+          loop
+          muted
+          preload="auto"
+          data:image="dist/assets/video/video-preload.webp"
+        >
+          <source src="dist/assets/video/heroVideo.webm" type="video/webm" />
+          <source src="dist/assets/video/heroVideo.mp4" type="video/mp4" />
+          <p>Sorry, your browser doesn't support embedded videos.</p>
+        </video>
+      </div>
+      <div class="header__text">
+        <h1 class="header__text--main">We make outdoor living spaces</h1>
+        <h2 class="header__text--sub"><span id="typewriter"></span></h2>
+        <button id="captureModal" class="header__text--button">Get more info</button>
+      </div>
+    </header>
+    <main>
+      <section id="boxes" class="boxes">
+        <div class="boxes__box">
+          <p>Box 1</p>
+        </div>
+        <div class="boxes__box">
+          <p>Box 2</p>
+        </div>
+        <div class="boxes__box">
+          <p>Box 3</p>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
