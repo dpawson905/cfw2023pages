@@ -86,6 +86,20 @@ ul {
   grid-template-rows: 100vh repeat(9, min-content);
 }
 
+.btn {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 35px;
+  font-size: calc(1.5rem + 1vw);
+  font-weight: 200;
+}
+.btn__cta--1 {
+  background-color: var(--color-gold-light);
+}
+
 .header {
   grid-column: container-start/container-end;
   z-index: 500;
@@ -337,7 +351,7 @@ ul {
 .dropdown {
   position: relative;
   display: inline-block;
-  font-size: calc(1.2rem + 0.5vw);
+  font-size: calc(0.8rem + 0.5vw);
 }
 @media screen and (max-width: 1200px) {
   .dropdown {
@@ -349,7 +363,7 @@ ul {
   display: none;
   position: absolute;
   background-color: var(--color-black);
-  min-width: 160px;
+  min-width: 260px;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -448,84 +462,68 @@ main {
   grid-column: container-start/container-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  min-height: 50dvh;
+  height: 100%;
   font-size: calc(1.5rem + 2vw);
   overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
   .boxes {
     grid-template-columns: 1fr;
-    min-height: 1000px;
   }
 }
 .boxes__box {
   width: 100%;
-  height: 100%;
+  min-height: 400px;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
   color: var(--color-white);
   position: relative;
   overflow: hidden;
 }
-.boxes__box a {
+.boxes__box div {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  gap: 2rem;
 }
-@media screen and (max-width: 1200px) {
-  .boxes__box a {
-    opacity: 1;
-  }
+.boxes__box h3 {
+  font-weight: 300;
+  margin-top: 2rem;
 }
-.boxes__box:hover a {
-  opacity: 1;
+.boxes__box p {
+  font-size: calc(1.2rem + 0.5vw);
+  font-weight: 200;
+  padding: 0 3rem;
 }
 .boxes__box:nth-child(1), .boxes__box:nth-child(2), .boxes__box:nth-child(3) {
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
   height: 100%;
   width: 100%;
-}
-.boxes__box:nth-child(1):hover, .boxes__box:nth-child(1):active, .boxes__box:nth-child(2):hover, .boxes__box:nth-child(2):active, .boxes__box:nth-child(3):hover, .boxes__box:nth-child(3):active {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  overflow: hidden;
-}
-@media screen and (max-width: 1200px) {
-  .boxes__box:nth-child(1):hover, .boxes__box:nth-child(1):active, .boxes__box:nth-child(2):hover, .boxes__box:nth-child(2):active, .boxes__box:nth-child(3):hover, .boxes__box:nth-child(3):active {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 .boxes__box:nth-child(1) {
   background-color: var(--color-blue-mod-dark);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/outdoor-furn.webp");
 }
 .boxes__box:nth-child(2) {
   background-color: var(--color-grey);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/outdoor-kit.webp");
 }
 .boxes__box:nth-child(3) {
   background-color: var(--color-blue-mod);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/dist/assets/images/fireplace.webp");
 }
 /*# sourceMappingURL=style.css.map */

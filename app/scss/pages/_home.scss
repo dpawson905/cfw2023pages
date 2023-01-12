@@ -1,86 +1,71 @@
-main {
-  grid-column: container-start / container-end;
-}
-
-.boxes {
-  grid-column: container-start / container-end;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 50dvh;
-  font-size: font-size(font-size-medium);
-  overflow: hidden;
-
-  @include media-tablet {
-    grid-template-columns: 1fr;
-    min-height: 1000px;
+  main {
+    grid-column: container-start / container-end;
   }
 
-  &__box {
-    width: 100%;
-    height: 100%;
-    display: flex;
+  .boxes {
+    grid-column: container-start / container-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
     justify-content: center;
     align-items: center;
-    color: var(--color-white);
-    position: relative;
+    text-align: center;
+    height: 100%;
+    font-size: font-size(font-size-medium);
     overflow: hidden;
 
-    & a {
+    @include media-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    &__box {
+      width: 100%;
+      min-height: 400px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-      height: 100%;
-      width: 100%;
+      color: var(--color-white);
+      position: relative;
       overflow: hidden;
 
-      @include media-tablet {
-        opacity: 1;
+      div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      h3 {
+        font-weight: font-weight(font-weight-light);
+        margin-top: 2rem;
+      }
+
+      p {
+        font-size: font-size(font-size-small);
+        font-weight: font-weight(font-weight-thin);
+        padding: 0 3rem;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        height: 100%;
+        width: 100%;
+      }
+      
+      &:nth-child(1) {
+        background-color: var(--color-blue-mod-dark);
+      }
+      &:nth-child(2) {
+        background-color: var(--color-grey);
+      }
+      &:nth-child(3) {
+        background-color: var(--color-blue-mod);
       }
     }
 
-    &:hover a {
-      opacity: 1;
-    }
-
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      background-position: center;
-      background-size: cover;
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
-      height: 100%;
-      width: 100%;
-
-      &:hover,
-      &:active {
-        transform: scale(1.02);
-        overflow: hidden;
-
-        @include media-tablet {
-          transform: none;
-        }
-      }
-    }
     
-    &:nth-child(1) {
-      background-color: var(--color-blue-mod-dark);
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/assets/images/outdoor-furn.webp');
-    }
-    &:nth-child(2) {
-      background-color: var(--color-grey);
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/assets/images/outdoor-kit.webp');
-    }
-    &:nth-child(3) {
-      background-color: var(--color-blue-mod);
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/assets/images/fireplace.webp');
-    }
   }
-
-  
-}

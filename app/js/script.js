@@ -105,7 +105,7 @@ ready(function () {
     var addressLink = document.querySelector(".address");
     var phoneLink = document.querySelector(".phone");
 
-    locationDiv.innerHTML = "Nearest store: " + nearestStore.name;
+    locationDiv.innerHTML = "Nearest store: <br>" +  nearestStore.name;
     distanceLink.innerHTML =
       "Distance: " + nearestDistance.toFixed(2) + " miles away";
     distanceLink.href = nearestStore.href;

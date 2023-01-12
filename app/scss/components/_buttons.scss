@@ -1,0 +1,14 @@
+.btn {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 35px;
+  font-size: font-size(font-size-regular);
+  font-weight: font-weight(font-weight-thin);
+
+  &__cta--1 {
+    background-color: var(--color-gold-light);
+  }
+}
