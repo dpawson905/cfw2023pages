@@ -25,7 +25,7 @@
 
     &__link {
       font-size: font-size(font-size-small);
-      border: 1px solid var(--color-gold);
+      border: 1px solid var(--color-gold-dark);
       width: 100%;
       text-align: center;
       padding: 1rem 2rem;
@@ -34,7 +34,7 @@
 
       &:hover,
       &:active {
-        background-color: var(--color-gold);
+        background-color: var(--color-gold-dark);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) inset;
       }
     }
@@ -43,7 +43,7 @@
 
   &.open {
     left: 0;
-    background-color: #333;
+    background-color: var(--color-black-dark);
     opacity: 1;
     transition: left 0.3s ease,background-color 0.3s ease, opacity 0.3s ease;
     z-index: 9999;

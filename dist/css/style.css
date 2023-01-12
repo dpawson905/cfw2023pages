@@ -183,15 +183,15 @@ ul {
   background: transparent;
 }
 .header__nav-button.active .header__nav-button--line:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(7px, 5px);
-          transform: rotate(45deg) translate(7px, 5px);
+  -webkit-transform: rotate(45deg) translate(7px, 9px);
+          transform: rotate(45deg) translate(7px, 9px);
 }
 .header__nav-button.active .header__nav-button--line:nth-child(2) {
   opacity: 0;
 }
 .header__nav-button.active .header__nav-button--line:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translate(15px, -12px);
-          transform: rotate(-45deg) translate(15px, -12px);
+  -webkit-transform: rotate(-45deg) translate(11px, -12px);
+          transform: rotate(-45deg) translate(11px, -12px);
 }
 .header__nav {
   background-color: transparent;
@@ -469,7 +469,7 @@ ul {
 }
 .off-canvas-nav--links__link {
   font-size: calc(1.2rem + 0.5vw);
-  border: 1px solid var(--color-gold);
+  border: 1px solid var(--color-gold-dark);
   width: 100%;
   text-align: center;
   padding: 1rem 2rem;
@@ -477,12 +477,12 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 .off-canvas-nav--links__link:hover, .off-canvas-nav--links__link:active {
-  background-color: var(--color-gold);
+  background-color: var(--color-gold-dark);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) inset;
 }
 .off-canvas-nav.open {
   left: 0;
-  background-color: #333;
+  background-color: var(--color-black-dark);
   opacity: 1;
   transition: left 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
   z-index: 9999;

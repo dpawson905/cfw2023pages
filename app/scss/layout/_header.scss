@@ -51,13 +51,13 @@
       background: transparent;
 
       .header__nav-button--line:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 5px);
+        transform: rotate(45deg) translate(7px, 9px);
       }
       .header__nav-button--line:nth-child(2) {
         opacity: 0;
       }
       .header__nav-button--line:nth-child(3) {
-        transform: rotate(-45deg) translate(15px, -12px);
+        transform: rotate(-45deg) translate(11px, -12px);
       }
     }
   }
