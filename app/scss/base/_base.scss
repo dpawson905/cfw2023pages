@@ -1,13 +1,13 @@
 @use "sass:color";
 
 $colors: (
-  "color-gold": #9b7d4f,
-  "color-blue": #171b40,
+  "color-gold": #f4c95d,
+  "color-blue": #1481ba,
   "color-blue-mod": #8ca8c2,
-  "color-green": #4d5337,
+  "color-green": #34403a,
   "color-grey": #bcbec0,
-  "color-black": #2f2d2e,
-  "color-white": #f2f2f2,
+  "color-black": #565554,
+  "color-white": #fbf9ff,
 );
 
 *,
@@ -28,6 +28,7 @@ $colors: (
 
 html {
   font-size: 62.5%; // 1rem = 10px 10px/16px = 62.5%
+  scroll-behavior: smooth;
 }
 
 ul[role="list"],
@@ -40,6 +41,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* Make images easier to work with */

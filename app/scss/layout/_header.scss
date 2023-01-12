@@ -244,6 +244,7 @@
   font-size: font-size(font-size-xs);
   @include media-tablet {
     margin: 0rem 0 0 2rem;
+    font-size: font-size(font-size-small);
   }
 }
 .dropdown__content {
@@ -279,4 +280,18 @@
 
 .active {
   color: var(--color-white) !important;
+}
+
+.down-arrow {
+  position: absolute;
+  top: calc(150%);
+  left: calc(50%);
+  animation: jumpInfinite 1.5s infinite;
+  font-size: font-size(font-size-medium);
+  color: var(--color-white);
+
+  @include media-tablet {
+    top: calc(120%);
+    left: calc(60%);
+  }
 }
