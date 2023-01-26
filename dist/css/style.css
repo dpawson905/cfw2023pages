@@ -233,7 +233,7 @@ ul {
   }
 }
 .header__nav--brand img {
-  height: 100%;
+  height: 7rem;
   width: 100%;
 }
 @media screen and (max-width: 1200px) {
@@ -295,7 +295,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 .header__video-hero video {
@@ -521,7 +521,7 @@ main {
 }
 .boxes__box {
   width: 100%;
-  min-height: 400px;
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -545,6 +545,7 @@ main {
   -ms-flex-align: center;
       align-items: center;
   gap: 2rem;
+  padding-bottom: 4rem;
 }
 .boxes__box h3 {
   font-weight: 300;
@@ -554,10 +555,6 @@ main {
   font-size: calc(1.2rem + 0.5vw);
   font-weight: 200;
   padding: 0 3rem;
-}
-.boxes__box:nth-child(1), .boxes__box:nth-child(2), .boxes__box:nth-child(3) {
-  height: 100%;
-  width: 100%;
 }
 .boxes__box:nth-child(1) {
   background-color: var(--color-blue-dark);
