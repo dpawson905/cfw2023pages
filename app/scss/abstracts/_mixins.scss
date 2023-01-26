@@ -6,13 +6,6 @@
   }
 }
 
-@mixin center-hor-ver {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @mixin media-desktop {
   @media screen and (min-width: break-point(break-point-desktop)) {
     @content

@@ -101,14 +101,10 @@ ready(function () {
     }
 
     var locationDiv = document.getElementById("location");
-    var distanceLink = document.querySelector(".distance");
     var addressLink = document.querySelector(".address");
     var phoneLink = document.querySelector(".phone");
 
-    locationDiv.innerHTML = "Nearest store: <br>" +  nearestStore.name + " <span><i class='fa-solid fa-caret-down'></i></span>";
-    distanceLink.innerHTML =
-      "Distance: " + nearestDistance.toFixed(2) + " miles away";
-    distanceLink.href = nearestStore.href;
+    locationDiv.innerHTML = "Nearest store: <br>" +  nearestStore.name + " (" + nearestDistance.toFixed(2) + " miles)" + " <span><i class='fa-solid fa-caret-down'></i></span>";
     addressLink.innerHTML = "Address: " + nearestStore.address;
     addressLink.href = nearestStore.href;
     phoneLink.innerHTML = "Phone: " + nearestStore.phone;

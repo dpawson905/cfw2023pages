@@ -1,5 +1,16 @@
   main {
     grid-column: container-start / container-end;
+    display: grid;
+  }
+
+  .motto {
+    grid-column: center-start / center-end;
+    padding: calc(1vh + .5vw) 0 calc(1vh + .5vw) 0;
+
+    &__para {
+      font-size: font-size(font-size-small);
+    }
+    display: grid;
   }
 
   .boxes {
@@ -10,7 +21,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
     font-size: font-size(font-size-medium);
     overflow: hidden;
 
@@ -36,7 +46,7 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
       }
 
       h3 {
